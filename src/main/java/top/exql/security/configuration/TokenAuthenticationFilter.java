@@ -14,7 +14,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        SecurityContextHolder.getContext().setAuthentication(new TokenAuthentication("abcdef"));
+        SecurityContextHolder.getContext().setAuthentication(new TokenAuthentication("hello"));
         filterChain.doFilter(httpServletRequest, httpServletResponse);
     }
 }
